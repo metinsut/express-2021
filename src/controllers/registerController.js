@@ -1,6 +1,6 @@
 import User from "../models/user.js"
 
-const SignUp = (req, res) => {
+const Register = (req, res) => {
     const { email, password } = req.body
     const findUser = User.findOne({ email })
     findUser
@@ -21,7 +21,7 @@ const SignUp = (req, res) => {
                         res.status(201).json({
                             error: null,
                             success: {
-                                email: userData.email,
+                                message: "Register Success",
                             },
                         })
                     })
@@ -41,4 +41,4 @@ const SignUp = (req, res) => {
         })
 }
 
-export default SignUp;
+export default Register;

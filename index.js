@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import database from './src/config/database.js';
 import optionsCors from './src/config/cors.js';
 import routes from './src/routes/index.js';
+import cookieParser from "cookie-parser"
 
 dotenv.config();
 const dev = process.env.NODE_ENV !== 'production';
@@ -33,6 +34,8 @@ app.use(cors(optionsCors));
 
 // express middleware for json body parser
 app.use(express.json());
+
+app.use(cookieParser())
 
 app.use(express.static('static'));
 

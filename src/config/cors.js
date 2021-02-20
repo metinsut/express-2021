@@ -1,7 +1,8 @@
 const optionsCors = {
     origin: '*',
-    methods: 'GET POST',
-    allowedHeaders: 'X-Requested-With,content-type,authorization',
+    methods: '*',
+    allowedHeaders: '*',
+    exposedHeaders: '*',
     credentials: true,
     maxAge: 84600,
 };
